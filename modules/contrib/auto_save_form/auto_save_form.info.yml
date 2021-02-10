@@ -1,0 +1,10 @@
+name: 'Auto Save Form'
+type: module
+description: 'enable auto save functionality for forms.'
+core: 8.x
+configure: auto_save_form.auto_save_forms_id_form
+
+# Information added by Drupal.org packaging script on 2019-09-29
+version: '8.x-4.1'
+project: 'auto_save_form'
+datestamp: 1569748991

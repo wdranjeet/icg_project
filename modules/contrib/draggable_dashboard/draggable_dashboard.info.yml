@@ -1,0 +1,11 @@
+name: Draggable Dashboard
+type: module
+description: 'Individual and configurable dashboard, so user can see own favourite functions immediately'
+package: Content
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2020-05-22
+version: '8.x-1.4'
+project: 'draggable_dashboard'
+datestamp: 1590155548

@@ -1,0 +1,8 @@
+name: 'Icegate Webform Handler'
+description: 'Icegate Webform Handler for Create New User on Websubmission'
+type: module
+core: 8.x
+version: 8.x-0.1
+package: Custom
+dependencies:
+  - webform

@@ -1,0 +1,8 @@
+name: "Icegate content Access By Role"
+description: "Get content by User's Roles"
+version: 8.x;
+core: 8.x
+package: Custom
+type: module
+dependencies:
+  - block

@@ -1,0 +1,6 @@
+name: 'Icegate Rest API'
+description: 'Icegate Rest Api Extend'
+version: '8.x.0.0'
+core: 8.x
+package: Custom
+type: module

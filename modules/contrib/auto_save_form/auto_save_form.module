@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains auto_save_form.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function auto_save_form_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the auto_save_form module.
+    case 'help.page.auto_save_form':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module enables functionality to persist form\'s data in browser\'s local
+storage and never lose it on occasional tabs closing, browser crashes and other
+disasters!.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function auto_save_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $config_auto_save_form_ids = \Drupal::config('auto_save_form.autosaveformsid')->get('form_ids');
+  if (!empty($config_auto_save_form_ids)) {
+    $form_ids = array_map('trim', explode(",", $config_auto_save_form_ids));
+    if (in_array($form_id, $form_ids)) {
+      $js_form_ids = array_map('_auto_save_form_js_form_id', explode(",", $config_auto_save_form_ids));
+      $form['#attached']['library'][] = 'auto_save_form/auto_save_form';
+      $form['#attached']['drupalSettings']['auto_save']['form_ids'] = $js_form_ids;
+    }
+  }
+}
+
+/**
+ * Function to get js form id from drupal form id.
+ *
+ * @param string $string
+ *   Form id to make js form id.
+ *
+ * @return string
+ *   String.
+ */
+function _auto_save_form_js_form_id($string = NULL) {
+  if ($string) {
+    return trim(str_replace("_", "-", $string));
+  }
+  return "";
+}

@@ -1,0 +1,82 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user\Entity\User;
+use Drupal\user\Entity\Role;
+
+
+// Get ALL Roles
+
+// $user_roles = \Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple();
+// $roles = Role::loadMultiple();
+// foreach($roles as $role) {
+//   echo $role->label();
+// }
+//print_r(key($user_roles));exit;
+/**
+ * @file
+ *
+ */
+
+/**
+ * hook_vews_query_alter
+ *
+ */
+
+// function icg_content_access_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+//    if ($view->id() == 'role_by_content_access' && $view->getDisplay()->display['id'] == 'role_by_content') {
+//        $configuration = array(
+//           'type'       => 'INNER',
+//           'table'      => 'node__field_user_role',
+//           'field'      => 'entity_id',
+//           'left_table' => 'node_field_data',
+//           'left_field' => 'nid',
+//           'operator'   => '=',
+//         );
+
+//         $join = \Drupal\views\Views::pluginManager('join')
+//           ->createInstance('standard', $configuration);
+//         $rel = $query->addRelationship('node__field_user_role', $join, 'node_field_data');
+//         $query->addTable('node__field_user_role', $rel, $join, 'node_field_data');
+//         $query->addWhere('', 'node__field_user_role.field_user_role_target_id', '21', 'IN');
+//   }
+// }
+
+
+
+function icg_content_access_entity_presave(EntityInterface $entity) {
+
+  // debug($entity);
+
+  // echo $entity->id();exit;
+  // if($entity->getEntityTypeId() == 'user_role') {
+  //   //print_r($entity->bundle());
+  //   $role_name = $entity->id();
+  //   //echo $role_name;
+  //   $role_label= $entity->label();
+  //   $term = \Drupal::entityTypeManager()
+  //     ->getStorage('taxonomy_term')
+  //     ->loadByProperties(['name' => $role_name, 'vid' => 'user_roles']);
+  //     $term = reset($term);
+  //     if(!$term->id()){
+  //     $data = array('id' => $role_name, 'label' => $role_label );
+  //     //creating your role
+  //     $role = \Drupal\user\Entity\Role::create($data);
+  //     //saving your role
+  //     $role->save();
+  //     }
+
+  // }
+//   if ($entity instanceof UserInterface && $entity->isTranslatable()) {
+//     //$user = User::load($entity->id());
+//     //$user->addRole('foobar');
+
+//   // echo 'role';exit;
+//     //print_r($entity->id());
+
+//  }
+
+}
+
+
+

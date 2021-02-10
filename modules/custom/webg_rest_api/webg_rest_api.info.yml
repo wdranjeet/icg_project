@@ -1,0 +1,6 @@
+name: 'WebG Rest Api'
+description: 'WebG Custom Rest Api Resource'
+core: 8.x
+version: 8.x.0.0
+package: Custom
+type: module

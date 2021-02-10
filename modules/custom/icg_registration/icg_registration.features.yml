@@ -1,0 +1,6 @@
+excluded:
+  - block_styles.blocks.views_block__event_activity_eventactivity
+  - block_styles.blocks.views_block__event_activity_homepageicons
+  - block_styles.blocks.views_block__event_activity_socialmedia
+  - block_styles.blocks.views_block__latest_news_home_latest_news
+required: true

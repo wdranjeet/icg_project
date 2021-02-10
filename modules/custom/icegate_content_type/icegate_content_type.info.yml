@@ -1,0 +1,27 @@
+name: 'Icegate Content Type'
+description: 'Icegate Content-Type Bundle'
+type: module
+core: 8.x
+dependencies:
+  - blazy
+  - block
+  - content_translation
+  - field
+  - file
+  - icg_home_page_slider
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - quicktabs
+  - system
+  - taxonomy
+  - text
+  - user
+  - view_marquee
+  - views
+  - views_field_view
+version: 8.x-1.0
+core_incompatible: false

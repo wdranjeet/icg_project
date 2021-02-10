@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.icegate_homepage
+id: node.icegate_homepage
+target_entity_type_id: node
+target_bundle: icegate_homepage
+default_langcode: site_default
+language_alterable: false

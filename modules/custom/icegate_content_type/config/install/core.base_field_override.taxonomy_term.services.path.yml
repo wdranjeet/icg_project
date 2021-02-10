@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.services
+  module:
+    - path
+id: taxonomy_term.services.path
+field_name: path
+entity_type: taxonomy_term
+bundle: services
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

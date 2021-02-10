@@ -1,0 +1,26 @@
+# Hindi translation of GraphQL (8.x-3.0)
+# Copyright (c) 2019 by the Hindi translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GraphQL (8.x-3.0)\n"
+"POT-Creation-Date: 2019-10-31 20:39+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Hindi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Delete"
+msgstr "मिटायें"
+msgid "Submit"
+msgstr "जमा करें"
+msgid "Operations"
+msgstr "कार्यवाही"
+msgid "Version"
+msgstr "संस्करण"
+msgid "Import"
+msgstr "आयात करें"
+msgid "Provider"
+msgstr "प्रदाता"

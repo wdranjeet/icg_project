@@ -1,0 +1,4 @@
+auto_save_form:
+  version: 1.x
+  js:
+    js/auto-save-form.js: {}

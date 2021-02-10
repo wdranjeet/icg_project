@@ -1,0 +1,6 @@
+name: 'Ajax Form Example'
+description: 'Ajax Form Example'
+type: module
+core: 8.x
+version: 8.x-1.0
+package: 'Custom'

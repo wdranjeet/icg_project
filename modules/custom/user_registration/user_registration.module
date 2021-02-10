@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ *  User Registration Process
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\InvokeCommand;
+
+/**
+ * Implements hook_form_alter().
+ * @see hook_form_alter()
+ * @see hook_form_alter()
+ */
+function user_registration_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    if ($form_id === 'webform_submission_user_registration_add_form') {
+    
+      $form['enter_icegate_id_of_licence_holder_f_card_holder']['widget'][0]['value']['#ajax'] =
+      [
+        'callback' => 'verifyIcegateId',
+        'disable-refocus' => FALSE,
+        'event' => 'change',
+        'wrapper' => 'edit-icegateid-verify',
+      ];
+    }
+  }
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @return \Drupal\Core\Ajax\AjaxResponse
+ */
+function verifyIcegateId(&$form, FormStateInterface $form_state) {
+  if (!empty($form_state->getValue('enter_icegate_id_of_licence_holder_f_card_holder')[0]['value'])) {
+    $iceGateId = $form_state->getValue('enter_icegate_id_of_licence_holder_f_card_holder')[0]['value'];
+    //API Request Do there
+
+    $response = new AjaxResponse();
+    $response->addCommand(new InvokeCommand('#edit-icegateid-verify', 'val', [$iceGateId]));
+    return $response;
+  }
+}

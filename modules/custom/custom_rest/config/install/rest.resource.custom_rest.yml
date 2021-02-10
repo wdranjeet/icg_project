@@ -1,0 +1,10 @@
+id: custom_rest
+plugin_id: custom_rest
+granularity: resource
+configuration:
+  GET:
+    formats:
+      - json
+      - hal_json
+    supported_auth:
+      - basic_auth

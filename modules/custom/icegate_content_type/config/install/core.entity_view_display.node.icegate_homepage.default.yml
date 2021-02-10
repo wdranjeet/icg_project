@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.icegate_homepage.body
+    - field.field.node.icegate_homepage.field_icon
+    - node.type.icegate_homepage
+  module:
+    - image
+    - text
+    - user
+id: node.icegate_homepage.default
+targetEntityType: node
+bundle: icegate_homepage
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_icon:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

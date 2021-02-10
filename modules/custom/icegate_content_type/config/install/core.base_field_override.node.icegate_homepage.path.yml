@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.icegate_homepage
+  module:
+    - path
+id: node.icegate_homepage.path
+field_name: path
+entity_type: node
+bundle: icegate_homepage
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event_activity.body
+    - field.field.node.event_activity.field_image
+    - node.type.event_activity
+  module:
+    - text
+    - user
+id: node.event_activity.teaser
+targetEntityType: node
+bundle: event_activity
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image: true
+  langcode: true

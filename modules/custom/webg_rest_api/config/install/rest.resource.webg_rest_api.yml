@@ -1,0 +1,9 @@
+id: webg_rest_api
+plugin_id: webg_rest_api
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

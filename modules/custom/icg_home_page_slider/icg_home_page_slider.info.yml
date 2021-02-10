@@ -1,0 +1,20 @@
+name: 'Icg Home Page Slider'
+description: 'Icegate Home Page Slider'
+type: module
+core: 8.x
+dependencies:
+  - content_translation
+  - field
+  - file
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - slick_views
+  - text
+  - user
+  - views
+version: 8.x-1.0
+core_incompatible: false

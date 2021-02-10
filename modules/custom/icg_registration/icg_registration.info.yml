@@ -1,0 +1,8 @@
+name: Icg_registration
+description: 'IceGate User Registration Process'
+type: module
+core: 8.x
+dependencies:
+  - block_styles
+  - webform
+version: ' 8.x-1.0'

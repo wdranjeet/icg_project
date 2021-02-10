@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+name: icegate_slider
+label: icegate_slider
+effects:
+  db63d324-8365-4bbc-8a2b-01f668344759:
+    uuid: db63d324-8365-4bbc-8a2b-01f668344759
+    id: image_scale
+    weight: -9
+    data:
+      width: 1080
+      height: 200
+      upscale: true
+  8281bfb3-a1ad-42f0-a5f2-2693a88e2b49:
+    uuid: 8281bfb3-a1ad-42f0-a5f2-2693a88e2b49
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 1080
+      height: 200
+      anchor: center-center

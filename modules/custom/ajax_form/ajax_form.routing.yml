@@ -1,0 +1,8 @@
+
+ajax_form.simple_form:
+  path: '/ajax_form/ajax_form'
+  defaults:
+    _form: '\Drupal\ajax_form\Form\AjaxForm'
+    _title: 'AJAX Form example'
+  requirements:
+    _permission: 'access content'
